@@ -60,9 +60,6 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* ... Other styles remain unchanged ... */
-
-
 .manufacturing-process h2 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -86,7 +83,6 @@ html {
   color: #333;
 }
 
-/* Style list numbers */
 .manufacturing-process ol {
   counter-reset: manufacturing-process-counter;
   list-style: none;
@@ -104,23 +100,13 @@ html {
   padding: 4px 8px;
 }
 
-/* Hover effect for list items */
 .manufacturing-process li:hover {
   background-color: #f5f5f5;
 }
 
-/* Box shadow on hover for entire process box */
 .manufacturing-process:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .manufacturing-process {
-    width: 100%;
-    margin-right: 0;
-  }
 }
 
 .car-image {
@@ -132,8 +118,55 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .manufacturing-process {
+    width: 60%;
+  }
+}
 
+@media (max-width: 992px) {
+  .manufacturing-process {
+    width: 70%;
+  }
+}
 
+@media (max-width: 768px) {
+  .manufacturing-process {
+    position: relative;
+    width: 800px;
+    margin-top: 850px;
+    margin-right: 0;
+  }
 
+  .manufacturing-process h2 {
+    font-size: 28px;
+  }
 
+  .manufacturing-process p {
+    font-size: 16px;
+  }
 
+  .manufacturing-process li::before {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+  .header{
+    width:780px;
+  }
+}
+
+@media (max-width: 576px) {
+  .manufacturing-process h2 {
+    font-size: 24px;
+  }
+
+  .manufacturing-process p {
+    font-size: 14px;
+  }
+
+  .manufacturing-process li::before {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+}
