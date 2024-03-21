@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#chart-container {
+  padding: 8px;
+  font-family: Arial;
+  height: 400px;
+  width: 80px;
+  overflow: auto;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  z-index: 999;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background-color: #333;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.github-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.github-link .github-icon {
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.manufacturing-process {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  margin-top:100px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ... Other styles remain unchanged ... */
+
+
+.manufacturing-process h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.manufacturing-process p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.manufacturing-process ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.manufacturing-process li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Style list numbers */
+.manufacturing-process ol {
+  counter-reset: manufacturing-process-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.manufacturing-process li::before {
+  counter-increment: manufacturing-process-counter;
+  content: counter(manufacturing-process-counter);
+  font-weight: bold;
+  margin-right: 8px;
+  color: #333;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+/* Hover effect for list items */
+.manufacturing-process li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Box shadow on hover for entire process box */
+.manufacturing-process:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .manufacturing-process {
+    width: 100%;
+    margin-right: 0;
   }
 }
+
+.car-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
