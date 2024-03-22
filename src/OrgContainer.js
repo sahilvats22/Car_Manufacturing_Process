@@ -4,7 +4,7 @@ import $ from "jquery";
 import "orgchart";
 import "orgchart/dist/css/jquery.orgchart.min.css"; // Import orgchart CSS
 import "./App.css";
-import { cst, generateRandomData } from "./constant";
+import { cst} from "./constant";
 import Header from "./Header";
 import Trial from "./Trial";
 
